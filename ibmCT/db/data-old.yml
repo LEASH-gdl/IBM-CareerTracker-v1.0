@@ -1,0 +1,65 @@
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - 2023-04-13 05:05:58.100754000 Z
+    - 2023-04-13 05:05:58.100754000 Z
+
+---
+certifications:
+  columns:
+  - id
+  - user_id
+  - issue_date
+  - cert_name
+  - cert_type
+  - cert_categ
+  - created_at
+  - updated_at
+  records: 
+  - - 3
+    - '073296781IBM'
+    - '2019-08-22'
+    - IBM Agile Explorer
+    - badge
+    - Agile methodologies
+    - 2023-05-04 19:27:35.767824000 Z
+    - 2023-05-04 19:27:35.767824000 Z
+
+---
+users:
+  columns:
+  - user_id
+  - name
+  - lastName
+  - email
+  - password_digest
+  - active
+  - user_type
+  - city
+  - state
+  - country
+  - department
+  - created_at
+  - updated_at
+  records: 
+  - - '073296781IBM'
+    - Anika
+    - Brooks
+    - anika_brooks@ibm.com
+    - "$2a$12$X2c8a5/S0ZAoH8oykUHzWOIeT72XHgXDnvEfOdpMRfE/MtRGLU1wO"
+    - true
+    - 1
+    - Guadalajara
+    - Jalisco
+    - Mexico
+    - Finance and Operation
+    - 2023-05-04 18:22:44.297587000 Z
+    - 2023-05-04 18:22:44.297587000 Z

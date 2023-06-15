@@ -1,0 +1,25 @@
+[
+    {
+        "department": "IT",
+        "city": "São Paulo",
+        "state": "São Paulo",
+        "country": "Brasil",
+        "cert_categ": "Cloud",
+        "cert_name": "IBM Cloud Essentials",
+        "issue_date": "2019-01-01",
+        "cert_type": "IBM",
+        "email": "example@ibm.com"
+    },
+    {
+        "user_id": "123456789",
+        "department": "IT",
+        "city": "São Paulo",
+        "state": "São Paulo",
+        "country": "Brasil",
+        "cert_categ": "Cloud",
+        "cert_name": "IBM Cloud Essentials",
+        "issue_date": "2019-01-01",
+        "cert_type": "IBM",
+        "email": "example@ibm.com"
+    }
+]

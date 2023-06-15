@@ -1,0 +1,57 @@
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - 2023-04-13 05:05:58.100754000 Z
+    - 2023-04-13 05:05:58.100754000 Z
+
+---
+users:
+  columns:
+  - user_id
+  - name
+  - lastName
+  - email
+  - password_digest
+  - active
+  - user_type
+  - city
+  - state
+  - country
+  - department
+  - created_at
+  - updated_at
+  records: 
+  - - '073296781IBM'
+    - Anika
+    - Brooks
+    - anika_brooks@ibm.com
+    - "$2a$12$Sd203pCdv3TyAsMgjokdzeUSD/w0ugtJJt/0X/0QTQR/ROXEPquJy"
+    - true
+    - 1
+    - Guadalajara
+    - Jalisco
+    - Mexico
+    - Finance and Operation
+    - 2023-05-04 18:08:49.496970000 Z
+    - 2023-05-04 18:08:49.496970000 Z
+  - - '070482781IBM'
+    - Donell
+    - Roberts
+    - donnell_roberts@ibm.com
+    - "$2a$12$Sd203pCdv3TyAsMgjokdzeUSD/w0ugtJJt/0X/0QTQR/ROXEPquJy"
+    - true
+    - 2
+    - Guadalajara
+    - Jalisco
+    - Mexico
+    - Human Resources
+    - 2023-05-04 18:08:49.496970000 Z
+    - 2023-05-04 18:08:49.496970000 Z

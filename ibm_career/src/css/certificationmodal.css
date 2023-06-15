@@ -1,0 +1,25 @@
+.certForm {
+  display: flex;
+  flex-direction: column;
+	gap: 1em;
+}
+
+.stretchable {
+  display: flex;
+  align-items: baseline;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+#certDateContainer {
+  flex-grow: 0;
+  flex-basis: fit-content;
+}
+
+#formBottom {
+  margin-bottom: 0;
+}
+
+.stretchable .cds--list-box__wrapper {
+  flex-grow: 1;
+}

@@ -1,0 +1,21 @@
+.stepContent {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.list {
+  margin-left: 1em;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  color: #606060
+}

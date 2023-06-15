@@ -1,0 +1,88 @@
+name: Build and Deploy the app to DigitalOcean
+
+on: 
+  push:
+    branches: [ master ]
+    paths-ignore:
+      - '.github/**'
+    
+  workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        services:
+            postgres:
+              image: postgres:13
+              env:
+                POSTGRES_USER: postgres
+                POSTGRES_PASSWORD: ${{ secrets.IBMCT_DATABASE_PASSWORD }}
+                POSTGRES_DB: ibmCT_test
+              ports:
+                - 5432:5432
+              options: >-
+                --health-cmd pg_isready
+                --health-interval 10s
+                --health-timeout 5s
+                --health-retries 5
+        
+        env:
+            RAILS_ENV: test
+            DATABASE_URL : postgres://postgres:${{ secrets.IBMCT_DATABASE_PASSWORD }}@localhost/ibmCT_test
+
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Set up Ruby
+              uses: ruby/setup-ruby@v1
+              with:
+                ruby-version: 3.0.1
+    
+            - name: Install dependencies
+              working-directory: ./ibmCT
+              run: |
+                gem install bundler
+                bundle install
+    
+            - name: Set up database
+              working-directory: ./ibmCT
+              run: |
+                bundle exec rake db:create
+                bundle exec rake db:migrate
+    
+            - name: Run tests
+              working-directory: ./ibmCT
+              env:
+                JWT_KEY: ${{ secrets.JWT_KEY }}
+              run: |
+                bundle exec rspec
+              
+            - name: Setup Node.js environment
+              uses: actions/setup-node@v1
+              with:
+                node-version: 12.x
+              
+            - name: Install dependencies
+              working-directory: ./ibm_career
+              run: npm install --jobs=4 --silent
+        
+            - name: Build
+              working-directory: ./ibm_career
+              env:
+                CI: ""
+              run: npm run build --if-present
+            
+            - name: Set up Python 3.8
+              uses: actions/setup-python@v2
+              with:
+                python-version: 3.8
+                architecture: x64
+                  
+            - name: Install dependencies
+              working-directory: ./flask
+              run: |
+                python -m pip install --upgrade pip
+                pip install -r requirements.txt
+                pip install gunicorn
+                pip install gevent

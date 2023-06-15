@@ -1,0 +1,36 @@
+.graphsContainer {
+  display: grid;
+  grid-gap: 4em;
+  grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+  margin-top: 1em;
+}
+
+.layout-child.title {
+  margin: 0;
+}
+
+.chart-holder.cds--chart-holder {
+  padding: 0.5em;
+}
+
+#avgCerts {
+  font-size: 1.2em;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding: 2em;
+}
+
+#avgCerts p {
+  margin: auto;
+}
+
+#avgCerts b {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#avgCerts hr{
+  width: 100%;
+}
