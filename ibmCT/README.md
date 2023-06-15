@@ -1,7 +1,7 @@
 # Backend for IBM Career Tracker
 The Backend for IBM Career Tracker is a Ruby on Rails application that provides the API for the frontend.
 
-To run the backend, you need to have Ruby 2.6.3 installed. You can install it from [here](https://www.ruby-lang.org/en/downloads/).
+To run the backend, you need to have Ruby 3.2.1 installed. You can install it from [here](https://www.ruby-lang.org/en/downloads/).
 And then, you need to install PostgreSQL, which is the database used by the application. You can install it from [here](https://www.postgresql.org/download/).
 
 Then you need to install rails, which is the framework used by the application. You can install it by running:
