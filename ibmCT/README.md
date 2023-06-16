@@ -22,6 +22,11 @@ Then you need to install rails, which is the framework used by the application. 
 gem install rails
 ```
 
+To verify that you have everything installed correctly, you should be able to run the following in a new terminal:
+```
+rails --version
+```
+
 Once you have Ruby installed, you need to install the bundler gem, which is used to install the dependencies of the application. You can install it by running:
 ```
 gem install bundler
