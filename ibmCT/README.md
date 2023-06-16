@@ -4,7 +4,7 @@ The Backend for IBM Career Tracker is a Ruby on Rails application that provides 
 To run the backend, you need to have Ruby 3.2.1 installed. You can install it from [here](https://www.ruby-lang.org/en/downloads/).
 And then, you need to install PostgreSQL, which is the database used by the application. You can install it from [here](https://www.postgresql.org/download/). When installing the database, let the host be “localhost”, the port “5432”, and the username “postgres”. 
 
-Then you need, in the root directory of the Backend “IBM-CareerTracker/ibmCT”, to create an “.env” file in which needs to include the following information (edit the info between < >):
+Then you need, in the root directory of the Backend “IBM-CareerTracker/ibmCT”, to create an “.env” file in which needs to include the following information (edit the info between < >, replace the <> with the information between "" and remove the <>):
 ```
 JWT_KEY = <created with the command "openssl rand -base64 32", to download OpenSSL use https://www.openssl.org/source/> 
 IBMCT_DATABASE_PASSWORD = <your PostgreSQL password>
